@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script language="JavaScript">
+		<!--
+		function calculateAdvice() {
+			var weight = document.Form.weight.value
+			var height = document.Form.height.value
+			var duration = document.Form.duration.value
+			if(duration < 1){
+				document.Form.advice.value = "You need to spend more days exercising."
+			}
+			else if(duration > 1 && duration < 3){
+				document.Form.advice.value = "You can find more time for exercising to be healthier."
+			}
+			else if duration > 3){
+				document.Form.advice.value = "You have a good schedule for exercise!"
+			}
+			else {
+				alert("Please fill in correctly")
+			}
+			if(weight > 0 && height > 0){	
+				var finalBmi = weight/((height/100)**2)
+				document.Form.bmi.value = finalBmi
+				if(finalBmi < 18.5){
+					document.Form.meaning.value = "Risk of developing problems such as nutritional deficiency and osteoporosis."
+				}
+				else if(finalBmi > 18.5 && finalBmi < 23.0){
+					document.Form.meaning.value = "You are currently healthy."
+				}
+				else if(finalBmi > 23.0 && finalBmi < 27.5){
+					document.Form.meaning.value = "Moderate risk of developing heart disease, high blood pressure, stroke, diabetes."
+				}
+				else if(finalBmi > 27.5){
+					document.Form.meaning.value = "High risk of developing heart disease, high blood pressure, stroke, diabetes."
+				}
+			}
+			else{
+				alert("Please Fill in everything correctly")
+			}
+		}
+		
+		//-->
+	</script>
+	<!-- <script language="JavaScript"> -->
+		<!-- <!-- -->
+		<!-- function calculateExerciseAdvice() { -->
+			<!-- var duration = document.Form.duration.value -->
+			<!-- if(duration < 1){ -->
+				<!-- document.Form.advice.value = "You need to spend more days exercising." -->
+			<!-- } -->
+			<!-- if(duration > 1 && duration < 3){ -->
+				<!-- document.Form.advice.value = "You can find more time for exercising to be healthier." -->
+			<!-- } -->
+			<!-- if duration > 3){ -->
+				<!-- document.Form.advice.value = "You have a good schedule for exercise!" -->
+			<!-- } -->
+			<!-- else { -->
+				<!-- alert("Please fill in correctly") -->
+			<!-- } -->
+		<!-- } -->
+		<!-- //--> 
+	<!-- </script> -->
+	<style>
+	body {
+		background-color: yellow;
+		font-size: 200%;
+	}
+	h1   {
+		color: black;
+		font: Arial;
+	}
+	img {
+		max-width: 65%
+	}
+
+  </style>
+  </head>
+  <body>
+    <h1>FITNESS MEASUREMENT</h1>
+    <p>
+      <img src="https://www.justrunlah.com/wp-content/uploads/2015/04/BMI_chart.gif" />
+    </p>
+	<p> You can measure your fitness rating here!</p>
+	<form name="Form">
+		Your Weight(kg): <input type="text" name="weight" placeholder="Enter your weight here" size="23"></br>
+		Your Height(cm): <input type="text" name="height" placeholder="Enter your height here" size="23"></br>
+		Exercise Schedule per Week: <input type="text" name="duration" placeholder="Enter integers only" size="13"></br>
+		<input type="button" value="Display Advice" onClick="calculateAdvice()"></br>
+		Your BMI: <input type="text" name="bmi" size="2"></br>
+		Interpretation: <input type="text" name="meaning" placeholder="Please do not enter anything here" size="100"></br>
+		<input type="text" name="advice" placeholder="Please do not enter anything here" size="100"></br>
+		<input type="reset" value="Reset"></input>
+	</form>
+  </body>
+</html>
